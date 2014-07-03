@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="dist/pebble-settings.min.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Slebble Config</a>
+        </div>
+      </div><!-- /.container-fluid -->
+    </nav>
+
+    <div class="page-wrapper container">
+      <div id="pageMain" class="page">
+        <!-- Add your site or application content here -->
+        <div class="row">
+          <div class="col-md-3">
+            <h3>Current Stations</h3>
+            <div id="currentStations" class="list-group"></div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-3">
+            <button class="btn btn-default btn-block btn-lg" id="btnAdd">Add</button>
+            <button class="btn btn-default btn-block btn-lg" id="btnCancel">Cancel</button>
+            <button class="btn btn-primary btn-block btn-lg" id="btnSubmit">Submit</button>
+            <button class="btn btn-danger btn-block btn-lg" id="btnReset">Reset</button>
+          </div>
+        </div>
+        <div id="dump"></div>
+      </div><!-- /#pageMain -->
+
+      <div id="pageAdd" class="page">
+        <!-- Add your site or application content here -->
+        <div class="row">
+          <div class="col-md-3">
+            <h1>Find station</h1>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-3">
+            <div class="form-group">
+              <div class="input-group">
+                <input type="search" class="form-control" id="inputSearch" placeholder="Enter a station name">
+                <span class="input-group-btn">
+                  <button class="btn btn-default" type="button" id="btnSearch">Search!</button>
+                </span>
+              </div><!-- /input-group -->
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-3">
+            <div id="spinner" class="text-center spinner"><img src="spin.svg" alt="spinner" /></div>
+            <div id="searchResults" class="list-group search-results"></div>
+          </div>
+        </div>
+
+        <nav class="navbar-fixed-bottom" role="navigation">
+          <div class="container">
+            <button class="btn btn-default btn-block btn-lg" id="pageAddBack">Back</button>
+          </div>
+        </nav>
+
+      </div><!-- /#pageAdd -->
+
+      <div id="pageSearch" class="page">
+        <div class="row">
+          <div class="col-md-3">
+            <h1>Search stuff</h1>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-3">
+            <div class="form-group">
+              <div class="input-group">
+                <input type="search" class="form-control" id="inputSearch" placeholder="Search Pebble on Github">
+                <span class="input-group-btn">
+                  <button class="btn btn-default" type="button" id="pageSearchGo">Go!</button>
+                </span>
+              </div><!-- /input-group -->
+            </div>
+          </div>
+        </div>
+
+        <div class="row" id="repoBox">
+          <div class="col-md-3">
+            <div id="repoLoader" class="text-center repo-loader"><img src="spin.svg" alt="spinner" /></div>
+            <div id="repoList" class="list-group"></div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-3">
+            <button class="btn btn-default btn-block" id="pageSearchBack">Back</button>
+            <button class="btn btn-primary btn-block" id="pageSearchQuery">Got It!</button>
+          </div>
+        </div>
+      </div><!-- /pageTwo -->
+
+      <div id="pageSearchNext" class="page">
+        <div class="row">
+          <div class="col-md-3">
+            <h1>Search Landing</h1>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-3">
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="dist/pebble-settings.min.js"></script>
+  </body>
+</html>
+

@@ -1,0 +1,88 @@
+.page-wrapper {
+  margin-bottom: 30px;
+  margin-top: 60px;
+
+  .page {
+    display: none;
+  }
+
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+// #got-sweet {
+//   display: none;
+// }
+
+// ul.repo-list {
+
+//   list-style: none;
+//   margin: 0;
+//   margin-bottom: 10px;
+//   padding: 0;
+
+//   li {
+//     border-bottom: 1px solid #999;
+//     padding: 8px 5px;
+
+//     &:first-child {
+//       border-top: 1px solid #999;
+//     }
+//   }
+// }
+
+// Fix height diff when using input+button group
+input[type=search] {
+  height: 33px;
+}
+
+// hide alerts initialy
+.alert {
+  display: none;
+}
+
+#spinner {
+  display: none;
+}
+
+.list-button {
+  // background-color: #f00;
+  background-color: #fff;
+  border: 0;
+  border-left: 1px solid #ccc;
+  float: right;
+  font-size: 20px;
+  margin-right: -15px;
+  margin-top: -10px;
+  padding: 6px 15px;
+
+  &:hover {
+    background-color: #ccc;
+  }
+}
+
+.list-group-item {
+  &:first-child {
+    .list-button {
+      border-top-right-radius: 4px;
+    }
+  }
+
+  &:last-child {
+    .list-button {
+      border-bottom-right-radius: 4px;
+      padding: 5px 15px;
+    }
+  }
+}
+
+.navbar-fixed-bottom {
+  background-color: #ddd;
+  padding: 5px;
+}
+
+.search-results {
+  margin-bottom: 50px;
+}
