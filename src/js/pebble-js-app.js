@@ -180,8 +180,13 @@ Pebble.addEventListener("ready",
 
 Pebble.addEventListener("showConfiguration",
 						function(e) {
-							//localStorage.removeItem("data");
-							Pebble.openURL('http://mysliceofpi.se/slebble/slebble_conf_1_0_0.html');
+							// localStorage.removeItem("data");
+							var url = 'http://dump.victorhaggqvist.com/slebble/';
+							if (localStorage.data) {
+								Pebble.openURL(url + '#' + encodeURIComponent(localStorage.data));
+							}else {
+								Pebble.openURL(url);
+							}
 						});
 
 Pebble.addEventListener("webviewclosed",
