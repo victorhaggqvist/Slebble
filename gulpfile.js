@@ -1,6 +1,6 @@
 /* eslint strict: 0 */
 var gulp = require('gulp'),
-    shell = require('gulp-shell'),
+    exec = require('child_process').exec,
     webpack = require('webpack-stream'),
     stripCode = require('gulp-strip-code'),
     eslint = require('gulp-eslint');
@@ -36,9 +36,15 @@ gulp.task('strip', ['webpack'],function(){
     .pipe(gulp.dest('./src/js'));
 });
 
-gulp.task('build', ['strip'], shell.task([
-  'pebble build'
-]));
+gulp.task('build', ['strip'], function(){
+  exec('pebble build', function(error, stdout, stderr) {
+    console.log(stdout);
+    console.log(stderr);
+    if (error !== null) {
+      console.log('exec error: ' + error);
+    }
+  });
+});
 
 // define tasks here
 gulp.task('default', ['webpack', 'lint', 'strip', 'build']);
