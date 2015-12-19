@@ -21,10 +21,12 @@ before_install:
 
 install:
 - make --directory=cmocka-1.0.1/build && make install --directory=cmocka-1.0.1/build
-- nvm install 4.1
+- npm install n
+- n stable
+- export PATH=/home/travis/.n/n/versions/node/$(n --stable)/bin:$PATH
 - pip install --install-option="--no-cython-compile" cython
 - pip install -r pebble-dev/${PEBBLE_SDK}/requirements.txt
-- npm install
+- npm install --depth 0
 - export PATH=$(pwd)/pebble-dev/${PEBBLE_SDK}/bin:$PATH
 - touch pebble-dev/NO_TRACKING
 
@@ -32,3 +34,4 @@ install:
 env:
   global:
   - PEBBLE_SDK=PebbleSDK-3.4
+  - N_PREFIX=$HOME/.n
